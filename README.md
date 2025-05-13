@@ -1,168 +1,56 @@
-# Android Login Form - Mobile Programming Assignment
+# Login Form - Android Mobile Programming Assignment
 
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white)
-![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
+A simple and modern login form application created for my Mobile Programming course assignment using Kotlin and Jetpack Compose.
 
-## 📱 Project Overview
+## Features
 
-A modern Android login form built with Jetpack Compose for a university mobile programming assignment. The application features a clean, user-friendly interface with form validation and appropriate user feedback.
-
-## ✨ Features
-
-- **Modern UI with Jetpack Compose**
-  - Material 3 design components
-  - Responsive layout
-  - Light/Dark theme support
-
-- **Complete Form Fields**
-  - Full Name input
+- **Modern UI** with Jetpack Compose and Material 3 design
+- **Complete registration form** with:
+  - Full name input
   - Username input
   - Password input with visibility toggle
-  - Confirm Password with visibility toggle
-  - Register button
+  - Confirm password validation
+- **Form validation** with error messages
+- **User feedback** via Toast messages
+- **Field clearing** after successful submission
 
-- **Form Validation**
-  - Required field validation
-  - Password length validation (minimum 6 characters)
-  - Password matching validation
-  - Real-time error clearing as user types
+## Screenshots
 
-- **User Feedback**
-  - Success toast messages
-  - Error toast messages with specific feedback
-  - Visual error indicators
-  - Fields automatically clear after successful submission
+*[Place screenshots here]*
 
-## 🖼️ Screenshots
+## Technologies Used
 
-<table>
-  <tr>
-    <td>Empty Form</td>
-    <td>Validation Errors</td>
-    <td>Success State</td>
-  </tr>
-  <tr>
-    <td><img src="/api/placeholder/200/400" alt="Empty Form" /></td>
-    <td><img src="/api/placeholder/200/400" alt="Validation Errors" /></td>
-    <td><img src="/api/placeholder/200/400" alt="Success State" /></td>
-  </tr>
-</table>
+- Kotlin
+- Jetpack Compose
+- Material 3 Components
+- Android Studio
 
-## 🔧 Technical Details
+## Requirements
 
-- **Language**: Kotlin
-- **UI Framework**: Jetpack Compose
-- **Minimum SDK**: 24
-- **Target SDK**: 35
-- **Architecture**: MVVM (Model-View-ViewModel)
-- **Build System**: Gradle with Kotlin DSL
-
-## 📁 Project Structure
-
-```
-app/
-├── src/
-│   ├── main/
-│   │   ├── java/com/czy/tugassatupemrogramanmobile/
-│   │   │   ├── MainActivity.kt              # Main activity with login screen
-│   │   │   └── ui/theme/                    # Theming components
-│   │   │       ├── Theme.kt                 # Color schemes and theme data
-│   │   │       └── Typography.kt            # Text styles
-│   │   └── res/                             # Resources
-│   └── androidTest/                         # Instrumentation tests
-└── build.gradle.kts                         # App module build configuration
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Android Studio Hedgehog (2023.1.1) or newer
-- JDK 11 or higher
 - Android SDK 35
+- Minimum SDK 24
+- Kotlin DSL for Gradle configuration
 
-### Installation
+## Setup
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/android-login-form.git
-   ```
+1. Clone the repository
+2. Open the project in Android Studio
+3. Sync Gradle and run the application
 
-2. Open the project in Android Studio.
+## Structure
 
-3. Sync Gradle files.
+- `MainActivity.kt` - Contains the main Compose UI implementation
+- `Theme.kt` and `Typography.kt` - Styling and theming configuration
+- Gradle files configured for Jetpack Compose
 
-4. Run the app on an emulator or physical device.
+## What I Learned
 
-## 💡 Implementation Details
+- Setting up a project with Jetpack Compose
+- Implementing Material 3 design components
+- Form validation in Compose
+- State management in Compose
+- UI/UX design principles
 
-### Form Validation Logic
+## License
 
-```kotlin
-// Validate fields
-var isValid = true
-
-if (fullName.isEmpty()) {
-    fullNameError = "Full name is required"
-    isValid = false
-}
-
-if (username.isEmpty()) {
-    usernameError = "Username is required"
-    isValid = false
-}
-
-if (password.isEmpty()) {
-    passwordError = "Password is required"
-    isValid = false
-} else if (password.length < 6) {
-    passwordError = "Password must be at least 6 characters"
-    isValid = false
-}
-
-if (confirmPassword.isEmpty()) {
-    confirmPasswordError = "Please confirm your password"
-    isValid = false
-} else if (confirmPassword != password) {
-    confirmPasswordError = "Passwords do not match"
-    isValid = false
-}
-```
-
-### Jetpack Compose UI Components
-
-The project utilizes various Jetpack Compose components:
-- `OutlinedTextField` for input fields with error states
-- Material Icons for field decoration
-- `Button` for form submission
-- Toast messages for user feedback
-
-## 🔍 Future Enhancements
-
-- Implement database integration with Room
-- Add fingerprint authentication
-- Create a "Remember Me" feature
-- Implement network-based authentication
-- Add animations for smoother UX
-
-## 📝 Assignment Requirements
-
-This project was created to meet the following requirements:
-- Create a login form with required fields
-- Implement proper validation
-- Provide user feedback for success/failure
-- Clear fields after successful submission
-- Use Jetpack Compose for a modern UI
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-- Your Name - [GitHub Profile](https://github.com/yourusername)
-
----
-
-*This project was created as part of a university mobile programming course using Kotlin.*
+*[Add your license here if applicable]*
